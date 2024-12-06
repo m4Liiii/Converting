@@ -29,22 +29,29 @@ class MigrateCateToCategories extends Command
      */
     public function handle()
     {
-
-          // Fetch all records from the Cate table
-          $cates = Cate::all();
-          foreach ($cates as $cate) {
-              Log::info('Source data (Cate):', $cate->toArray());
-          }
-  
-          // Fetch all records from the Category table
-          $categories = Category::all();
-          foreach ($categories as $category) {
-              Log::info('Target data (Category):', $category->toArray());
-          }
-  
-          Log::info('Data migration test completed.');
-  
-
-
+        Log::info('Starting data migration test...');
+    
+        $cates = Cate::all();
+    
+        foreach ($cates as $cate) {
+            Log::info('Source data (Cate):', $cate->toArray());
+    
+            $categoryData = [
+                'id' => $cate->id,
+                'name' => $cate->cate,
+                'code' => $cate->codec,
+                'type_delete' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ];
+            
+    
+            Category::create($categoryData);
+    
+            Log::info('Inserted data (Category):', $categoryData);
+        }
+    
+        Log::info('Data migration test completed.');
+    }    
     }
-}
+
