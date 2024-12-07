@@ -40,7 +40,7 @@ class MigrateCustomer extends Command
                 'id' => $Cust->id,
                 'name_customer' => $Cust->name,
                 'debt_customer' => $Cust->qusd,
-                'debt_first' => 0,
+                'debt_first' => $Cust->qusd,
                 'alert_of_debt' => $Cust->dayqard,
                 'address' => $Cust->addr,
                 'phone_number' => $Cust->tel,

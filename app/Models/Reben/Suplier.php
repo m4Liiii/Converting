@@ -4,10 +4,10 @@ namespace App\Models\Reben;
 
 use Illuminate\Database\Eloquent\Model;
 
-class GDebt extends Model
+class Suplier extends Model
 {
     protected $connection = 'mysql2'; 
-    protected $table = 'sale0';
+    protected $table = 'suplier';
 
     protected $guarded = [];
 }
