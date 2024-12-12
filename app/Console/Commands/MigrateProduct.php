@@ -15,7 +15,7 @@ class MigrateProduct extends Command
      *
      * @var string
      */
-    protected $signature = 'app:product';
+    protected $signature = 'app:products';
 
     /**
      * The console command description.

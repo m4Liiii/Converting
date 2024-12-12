@@ -14,7 +14,7 @@ class MigrateSeller extends Command
      *
      * @var string
      */
-    protected $signature = 'app:seller';
+    protected $signature = 'app:sellers';
 
     /**
      * The console command description.
@@ -42,7 +42,7 @@ class MigrateSeller extends Command
                 'debt_first' => 0,
                 'address' => $Sup->addr,
                 'phone_number' => $Sup->tel,
-                'type_curr' => 1,
+                'type_curr' => 0,
                 'type_delete' => 1,
                 'created_at' => now(),
                 'updated_at' => now(),

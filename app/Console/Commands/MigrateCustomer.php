@@ -15,7 +15,7 @@ class MigrateCustomer extends Command
      *
      * @var string
      */
-    protected $signature = 'app:customer';
+    protected $signature = 'app:customers';
 
     /**
      * The console command description.
