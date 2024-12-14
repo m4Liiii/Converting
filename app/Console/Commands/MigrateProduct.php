@@ -42,7 +42,7 @@ class MigrateProduct extends Command
                 'name_of_product' => $Rpr->item,
                 'code_of_product' => $Rpr->codei,
                 'quantity_of_box' => $Rpr->boxn,
-                'quantity_of_store' => $Rpr->koga,
+                'quantity_of_store' => 0,
                 'alert_of_out' => $Rpr->alertno,
                 'price_of_buy' => $Rpr->pkd,
                 'price_of_sell_tak' => $Rpr->pft,
